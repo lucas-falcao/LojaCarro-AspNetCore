@@ -1,0 +1,25 @@
+﻿@model CarrosTeste1.ViewModels.CarrosViewModels
+<h3>Carros Registrados:</h3>
+
+
+<table class="table table-bordered">
+    <thead></thead>
+    <tr>
+        <th>Nome</th>
+        <th>Marca</th>
+        <th>Valor</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var carro in Model.carros)
+        {
+            <tr>
+                <td>@carro.Nome</td>
+                <td>@carro.Marca.Descricao</td>
+                <td>@carro.Valor</td>
+                <td><a asp-controller="Carro" asp-action="Update" asp-route-id="@carro.Id">Atualizar</a></td>
+                <td><a asp-controller="Carro" asp-action="Excluir" asp-route-id="@carro.Id">Excluir</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

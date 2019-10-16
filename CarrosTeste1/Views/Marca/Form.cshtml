@@ -1,0 +1,11 @@
+﻿@model CarrosTeste1.Models.Marca
+
+    <div class="form-group">
+        <form asp-controller="Marca" asp-action="Update" method="post">
+            <div>
+                <label asp-for="Descricao">Descricao</label>
+                <input class="form-control" type="text" asp-for="Descricao" placeholder="Digite o nome da marca" />
+            </div>
+            <button class="btn btn-primary" type="submit">Registrar</button>
+        </form>
+    </div>

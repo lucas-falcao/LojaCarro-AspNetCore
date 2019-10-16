@@ -1,0 +1,11 @@
+﻿@model CarrosTeste1.ViewModels.CarrosViewModels
+
+<div class="form-group">
+    <form asp-controller="Marca" asp-action="Registro" method="post">
+        <div>
+        <label asp-for="Marca.Descricao">Descricao</label>
+        <input class="form-control" type="text" asp-for="Marca.Descricao" placeholder="Digite o nome da marca" />
+        </div>
+        <button class="btn btn-primary" type="submit">Registrar</button>
+    </form>     
+</div>

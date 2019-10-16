@@ -1,0 +1,23 @@
+﻿@model CarrosTeste1.ViewModels.CarrosViewModels
+
+    <h3>Marcas Registradas</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var marca in Model.marcas)
+            {
+            <tr>
+                <td>@marca.Descricao</td>
+                <td><a asp-action="Update" asp-route-id="@marca.Id">Atualizar</a></td>
+                <td><a asp-action="Excluir" asp-route-id="@marca.Id">Excluir</a></td>
+            </tr>
+                
+            }
+        </tbody>
+    </table>

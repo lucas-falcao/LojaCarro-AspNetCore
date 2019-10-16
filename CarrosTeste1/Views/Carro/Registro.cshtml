@@ -1,0 +1,32 @@
+﻿@model CarrosTeste1.ViewModels.CarrosViewModels
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="Carro" asp-action="Registro" method="post">
+                <div class="form-group">
+                    <label asp-for="Carro.Nome">Nome</label>
+                    <input class="form-control" type="text" asp-for="Carro.Nome" />
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Carro.Valor">Valor</label>
+                    <input class="form-control" type="number" asp-for="Carro.Valor" />
+                </div>
+
+
+                <div class="form-group">
+                    <label>Selecione a marca</label>
+                    <select class="form-control" asp-for="Carro.MarcaId">
+                        @foreach (var marca in Model.marcas.ToList())
+                        {
+                            <option value="@marca.Id">@marca.Descricao</option>
+                        }
+                    </select>
+                </div>
+
+
+                <button class="btn btn-dark" type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
